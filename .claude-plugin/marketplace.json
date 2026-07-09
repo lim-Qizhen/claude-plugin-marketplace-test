@@ -8,7 +8,7 @@
     {
       "name": "hello-plugin",
       "source": "./plugins/hello-plugin",
-      "description": "Adds a simple hello skill for testing plugin versioning"
+      "description": "Adds hello and goodbye skills for testing plugin versioning"
     }
   ]
 }

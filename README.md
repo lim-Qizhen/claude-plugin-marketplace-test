@@ -10,6 +10,7 @@ workflows (e.g. how version bumps show up in VS Code Copilot).
 plugins/hello-plugin/
   .claude-plugin/plugin.json         plugin manifest (name, version, author)
   skills/hello/SKILL.md              the "hello" skill
+  skills/goodbye/SKILL.md            the "goodbye" skill
 ```
 
 ## Testing locally with Claude Code
@@ -18,6 +19,7 @@ plugins/hello-plugin/
 /plugin marketplace add ./claude-plugin-marketplace-test
 /plugin install hello-plugin@claude-plugin-marketplace-test
 /hello-plugin:hello
+/hello-plugin:goodbye
 ```
 
 ## Testing from GitHub
