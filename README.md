@@ -11,6 +11,7 @@ plugins/hello-plugin/
   .claude-plugin/plugin.json         plugin manifest (name, version, author)
   skills/hello/SKILL.md              the "hello" skill
   skills/goodbye/SKILL.md            the "goodbye" skill
+  skills/version/SKILL.md            the "version" skill
 ```
 
 ## Testing locally with Claude Code
@@ -20,6 +21,7 @@ plugins/hello-plugin/
 /plugin install hello-plugin@claude-plugin-marketplace-test
 /hello-plugin:hello
 /hello-plugin:goodbye
+/hello-plugin:version
 ```
 
 ## Testing from GitHub
