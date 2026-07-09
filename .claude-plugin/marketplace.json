@@ -1,0 +1,14 @@
+{
+  "name": "claude-plugin-marketplace-test",
+  "owner": {
+    "name": "lim-Qizhen"
+  },
+  "description": "Test marketplace with one plugin, for exercising version-bump workflows",
+  "plugins": [
+    {
+      "name": "hello-plugin",
+      "source": "./plugins/hello-plugin",
+      "description": "Adds a simple hello skill for testing plugin versioning"
+    }
+  ]
+}

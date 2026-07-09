@@ -1,0 +1,8 @@
+{
+  "name": "hello-plugin",
+  "description": "Adds a simple hello skill for testing plugin versioning",
+  "version": "1.0.0",
+  "author": {
+    "name": "lim-Qizhen"
+  }
+}
