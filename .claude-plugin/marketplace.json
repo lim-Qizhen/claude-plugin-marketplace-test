@@ -9,6 +9,14 @@
       "name": "hello-plugin",
       "source": "./plugins/hello-plugin",
       "description": "Adds hello, goodbye, and version skills for testing plugin versioning"
+    },
+    {
+      "name": "figma",
+      "source": {
+        "source": "github",
+        "repo": "figma/mcp-server-guide"
+      },
+      "description": "Figma MCP server and skills (figma-use, figma-design-to-code, and others), tracked directly from Figma's repo"
     }
   ]
 }

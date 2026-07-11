@@ -31,6 +31,22 @@ plugins/hello-plugin/
 /plugin install hello-plugin@claude-plugin-marketplace-test
 ```
 
+## Third-party plugin: figma
+
+The `figma` entry points straight at Figma's own repo
+(`figma/mcp-server-guide`), which already ships a `.claude-plugin/plugin.json`
+and its own `skills/` directory (including `figma-use`). No files are copied
+into this marketplace — Claude Code clones/updates directly from Figma's repo,
+and version resolution follows *their* `plugin.json` version field.
+
+```
+/plugin install figma@claude-plugin-marketplace-test
+```
+
+To pick up a new Figma release, run `/plugin marketplace update` (refreshes
+the catalog) then `/plugin update figma@claude-plugin-marketplace-test`
+(re-resolves and re-fetches if Figma bumped their version).
+
 ## Bumping the version
 
 The plugin version lives only in `plugins/hello-plugin/.claude-plugin/plugin.json`
