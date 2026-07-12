@@ -9,10 +9,21 @@ workflows (e.g. how version bumps show up in VS Code Copilot).
 .claude-plugin/marketplace.json      marketplace catalog
 plugins/hello-plugin/
   .claude-plugin/plugin.json         plugin manifest (name, version, author)
-  skills/hello/SKILL.md              the "hello" skill
+  reference/english.md               shared reference file (British spelling rules)
+  reference/french.md                shared reference file (respond in French)
+  skills/hello/SKILL.md              the "hello" skill (loads a reference/ file conditionally)
   skills/goodbye/SKILL.md            the "goodbye" skill
   skills/version/SKILL.md            the "version" skill
 ```
+
+`reference/` sits at the plugin root, outside any single skill's own directory,
+and is shared across all skills in `hello-plugin`. `skills/hello/SKILL.md`
+reaches it via `${CLAUDE_PLUGIN_ROOT}/reference/<file>.md` — this variable is
+substituted inline in skill content, so it resolves correctly regardless of
+how deeply the skill is nested. This is testing whether reference files can
+be shared across skills within one plugin (they can, as long as they stay
+inside the plugin root — files outside the plugin directory entirely are not
+copied into the install cache and won't resolve).
 
 ## Testing locally with Claude Code
 
